@@ -1,0 +1,349 @@
+.page {
+  background-color: #2D2F22;
+  min-height: 100vh;
+  color: #BEC5A4;
+}
+
+.main {
+  min-height: 100vh;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 40px;
+  overflow: hidden;
+  background-image: url('/картинка 4.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.verticalText {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%) rotate(-90deg) translateX(-50%);
+  transform-origin: left center;
+  color: #BEC5A4;
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+  opacity: 0.8;
+  z-index: 1;
+}
+
+.socialIcons {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 1;
+}
+
+.iconLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+}
+
+.iconLink:hover {
+  opacity: 1;
+}
+
+.iconLink img {
+  filter: brightness(0) saturate(100%) invert(89%) sepia(8%) saturate(368%) hue-rotate(37deg) brightness(86%) contrast(82%);
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+  text-align: left;
+  color: #FFFFFF;
+  padding: 3.5rem 4.5rem;
+  max-width: 800px;
+  animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.heroTitle {
+  position: relative;
+  z-index: 2;
+  display: block;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.accent {
+  display: block;
+  font-size: 5rem;
+  font-weight: 700;
+  color: #BEC5A4;
+  margin-bottom: 1rem;
+  letter-spacing: 0.05em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  position: relative;
+  animation: slideIn 0.8s ease-out;
+}
+
+.accent::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -0.5rem;
+  width: 100px;
+  height: 3px;
+  background: linear-gradient(
+    to right,
+    rgba(190, 197, 164, 0.8),
+    rgba(190, 197, 164, 0.1)
+  );
+  animation: lineGrow 1.2s ease-out forwards;
+}
+
+@keyframes lineGrow {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100px;
+  }
+}
+
+.subtitle {
+  display: block;
+  font-size: 3.2rem;
+  font-weight: 500;
+  color: rgba(190, 197, 164, 0.9);
+  letter-spacing: 0.03em;
+  margin-top: 0.5rem;
+  animation: slideIn 0.8s ease-out 0.2s backwards;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 60px 20px;
+  }
+
+  .verticalText {
+    left: 20px;
+  }
+
+  .socialIcons {
+    right: 20px;
+  }
+
+  .heroContent {
+    padding: 2.5rem 2rem;
+  }
+
+  .accent {
+    font-size: 3.5rem;
+  }
+
+  .subtitle {
+    font-size: 2.2rem;
+  }
+
+  .accent::after {
+    width: 60px;
+  }
+
+  @keyframes lineGrow {
+    from {
+      width: 0;
+    }
+    to {
+      width: 60px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .heroContent {
+    padding: 2rem 1.5rem;
+  }
+
+  .accent {
+    font-size: 2.8rem;
+  }
+
+  .subtitle {
+    font-size: 1.8rem;
+  }
+}
+
+.process {
+  padding: 100px 40px;
+  background-color: #2D2F22;
+}
+
+.processContent {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.processHeader {
+  margin-bottom: 60px;
+}
+
+.processHeader h2 {
+  color: #C1FFAE;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  letter-spacing: 0.02em;
+}
+
+.processHeader p {
+  color: rgba(190, 197, 164, 0.9);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 800px;
+}
+
+.processSteps {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.processStep {
+  background: rgba(190, 197, 164, 0.05);
+  padding: 30px;
+  border-radius: 15px;
+  border: 1px solid rgba(190, 197, 164, 0.1);
+}
+
+.processStep h3 {
+  color: #C1FFAE;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  letter-spacing: 0.02em;
+}
+
+.processStep h4 {
+  color: #C1FFAE;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin: 25px 0 15px;
+}
+
+.processStep h4:first-child {
+  margin-top: 0;
+}
+
+.processStep ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.processStep li {
+  color: rgba(190, 197, 164, 0.9);
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 12px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.processStep li:before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #C1FFAE;
+}
+
+.processStep li:last-child {
+  margin-bottom: 0;
+}
+
+/* Специальное оформление для последнего блока с галочками */
+.processStep:last-child li {
+  padding-left: 0;
+}
+
+.processStep:last-child li:before {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .process {
+    padding: 60px 20px;
+  }
+
+  .processHeader h2 {
+    font-size: 2rem;
+  }
+
+  .processStep {
+    padding: 20px;
+  }
+
+  .processStep h3 {
+    font-size: 1.3rem;
+  }
+
+  .processStep h4 {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .processHeader h2 {
+    font-size: 1.8rem;
+  }
+
+  .processStep {
+    padding: 15px;
+  }
+
+  .processStep h3 {
+    font-size: 1.2rem;
+  }
+
+  .processStep h4 {
+    font-size: 1rem;
+  }
+} 

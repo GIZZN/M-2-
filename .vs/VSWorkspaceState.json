@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\.next",
+    "\\.next\\diagnostics",
+    "\\.next\\server",
+    "\\src",
+    "\\src\\app",
+    "\\src\\app\\about",
+    "\\src\\app\\components",
+    "\\src\\app\\contacts",
+    "\\src\\app\\production"
+  ],
+  "SelectedNode": "\\.next\\diagnostics",
+  "PreviewInSolutionExplorer": false
+}
