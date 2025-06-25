@@ -324,7 +324,9 @@ a.secondary {
   height: 100% !important;
   object-fit: contain;
   transform: rotate(0deg);
-
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
 }
 
 .whoWeAre {
